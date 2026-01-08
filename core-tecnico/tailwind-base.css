@@ -1,1 +1,86 @@
-aguardando conteudo
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Background & Foreground - Padrão Cinza Técnico/Limpo */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    /* Primary - Será injetado pelo config.md (Ex: Azul da Dra. Andressa) */
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+
+    /* Secondary - Tons de apoio e seções alternativas */
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    /* Accent - Destaques sutis em Hover ou Badges */
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    /* Status - Feedback de formulários e sistema */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --success: 142.1 70.6% 45.3%;
+    --success-foreground: 144.9 80.4% 10%;
+
+    /* Muted - Textos de suporte e desativados */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    /* Borders & Inputs */
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+
+    /* Radius - Controle de arredondamento global */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    /* ... configurações para Dark Mode se necessário no futuro ... */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  /* Utilitário Avançado para Containers de Landing Page */
+  .lp-container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Glassmorphism - Efeito tecnológico para Odontologia Digital */
+  .glass-effect {
+    @apply bg-white/70 backdrop-blur-md border border-white/20;
+  }
+
+  /* Botão ROI Positivo - Otimizado para Cliques */
+  .btn-cta {
+    @apply relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-primary px-8 py-4 text-lg font-bold text-primary-foreground shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-primary/20 active:scale-95 disabled:opacity-50;
+  }
+}
+
+@layer utilities {
+  /* Animações de Entrada Suaves */
+  .animate-reveal {
+    animation: reveal 0.8s cubic-bezier(0, 0, 0.2, 1) forwards;
+  }
+
+  @keyframes reveal {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
