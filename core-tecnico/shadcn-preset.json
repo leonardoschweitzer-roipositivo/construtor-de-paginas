@@ -1,1 +1,49 @@
-aguardando conteudo
+{
+  "system_name": "ROI POSITIVO Ultra-Core UI",
+  "version": "2.1.0",
+  "author": "Principal Software Architect - ROI POSITIVO",
+  "description": "Full Inventory of Shadcn/UI components for automated AI generation.",
+  "tech_stack": {
+    "framework": "Next.js (App Router)",
+    "styling": "Tailwind CSS",
+    "primitives": "Radix UI",
+    "icons": "Lucide React",
+    "notifications": "Sonner / Toast"
+  },
+  "component_registry": {
+    "layout_and_navigation": [
+      "AspectRatio", "Breadcrumb", "NavigationMenu", "Pagination", 
+      "Resizable", "ScrollArea", "Separator", "Sheet", "Sidebar", "Tabs"
+    ],
+    "forms_and_action": [
+      "Button", "ButtonGroup", "Checkbox", "Combobox", "Command", "DatePicker", 
+      "Form", "Input", "InputGroup", "InputOTP", "Label", "NativeSelect", 
+      "RadioGroup", "Select", "Slider", "Switch", "Textarea", "Toggle", "ToggleGroup"
+    ],
+    "data_display_and_feedback": [
+      "Accordion", "Avatar", "Badge", "Calendar", "Card", "Carousel", 
+      "Chart", "DataTable", "Empty", "Kbd", "Progress", "Skeleton", 
+      "Spinner", "Table", "Typography"
+    ],
+    "overlay_and_interaction": [
+      "AlertDialog", "Collapsible", "ContextMenu", "Dialog", "Drawer", 
+      "DropdownMenu", "HoverCard", "Menubar", "Popover", "Sonner", "Toast", "Tooltip"
+    ]
+  },
+  "implementation_guidelines": {
+    "typography": "Use the 'Typography' primitive patterns (H1, H2, P, Lead, Large, Small, Muted) using Tailwind classes as defined in config.md.",
+    "input_group": "Implement as a composition of Input + Button/Icon using 'flex' and 'rounded' resets.",
+    "button_group": "Implement using 'flex' with 'first:rounded-r-none' and 'last:rounded-l-none' logic.",
+    "item": "Generic sub-component pattern used within Select, Menu, and Command structures."
+  },
+  "theme_tokens": {
+    "colors": {
+      "primary": "hsl(var(--primary))",
+      "secondary": "hsl(var(--secondary))",
+      "accent": "hsl(var(--accent))",
+      "background": "hsl(var(--background))",
+      "foreground": "hsl(var(--foreground))"
+    },
+    "radius": "var(--radius)"
+  }
+}
