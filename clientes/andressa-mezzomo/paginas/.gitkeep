@@ -1,0 +1,20 @@
+# Landing Pages Repository
+
+## Estrutura de Versionamento
+
+Este diretório armazena todas as landing pages geradas para Dra. Andressa Mezzomo, versionadas em Git.
+
+### Subpastas:
+- **vsl/** - Video Sales Letter / Páginas de apresentação com propósito de vendas
+- **obrigado/** - Thank you pages / Páginas de confirmação pós-conversão
+- **upsell/** - Upgrade/upsell pages / Páginas de ofertas adicionais
+
+### Nomeação de Arquivos:
+`YYYYMMDD-{tipo}-{variacao}-v{numero}.jsx`
+
+Exemplo: `20260109-vsl-facetas-v1.jsx`
+
+### Versionamento em Git:
+- Cada geração é commitada com mensagem descritiva: `feat: vsl facetas v1 - 9 jan 2026`
+- Tags podem ser criadas para releases importantes: `git tag -a dra-andressa/vsl-v1 -m "VSL Facetas - Versão 1"`
+- Histórico completo disponível via `git log`
